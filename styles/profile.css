@@ -16,9 +16,11 @@ header {
 }
 
 nav {
-    width: 700px;
+    max-width: 700px;
     margin: auto;
     text-align: center;
+    background-color: #333;
+    padding: 10px;
 }
 
 nav a {
@@ -27,6 +29,8 @@ nav a {
     font-size: 20px;
     font-weight: bold;
     margin: 0 20px;
+    padding: 5px;
+    display: block;
 }
 
 nav a:hover {
@@ -35,11 +39,16 @@ nav a:hover {
 
 main {
     width: 700px;
+    max-width: 700px;
     margin: 30px auto;
     text-align: center;
+    background-color: #ededed;
+    padding: 20px;
+    border-radius: 5px;
 }
 
-main h1 {
+h1 {
+    color: #333333;
     font-size: 38px;
     margin-bottom: 25px;
 }
@@ -52,15 +61,31 @@ main img {
     border-radius: 50%;
     border: 5px solid #ddd;
     box-shadow: 0 8px 20px rgba(0, 0, 0, .35);
+    padding: 0;
 }
 
-main p {
-    background-color: #ededed;
-    padding: 20px;
+p {
+    padding: 0;
     line-height: 1.8;
     font-size: 18px;
-    border-radius: 5px;
     text-align: left;
+}
+
+aside {
+    width: 700px;
+    margin: 20px auto;
+    border: 1px solid #ddd;
+    padding: 20px;
+    background-color: #f9f9f9;
+    color: #333333;
+    border-radius: 5px;
+    text-align: center;
+}
+
+aside img {
+    width: 200px;
+    height: auto;
+    margin-top: 15px;
 }
 
 footer {
@@ -70,4 +95,5 @@ footer {
     padding: 18px;
     margin-top: 40px;
     font-size: 18px;
+    border-top: 2px solid #222;
 }
