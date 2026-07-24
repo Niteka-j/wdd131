@@ -1,0 +1,179 @@
+/* ==========================================================================
+   Base & Reset Styles
+   ========================================================================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333333;
+    line-height: 1.5;
+    background-color: #ffffff;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 10px 20px;
+}
+
+/* ==========================================================================
+   Header & Navigation
+   ========================================================================== */
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 0;
+}
+
+header img {
+    height: auto;
+    max-width: 120px;
+    margin-bottom: 5px;
+}
+
+header nav {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+header nav a {
+    color: #3b2880;
+    text-decoration: underline;
+    font-size: 0.9rem;
+}
+
+header nav a:hover {
+    color: #1a0dab;
+}
+
+/* ==========================================================================
+   Hero Section Layout (Grid Overlay)
+   ========================================================================== */
+.hero {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+    position: relative;
+    margin-top: 15px;
+    margin-bottom: 25px;
+}
+
+/* Main Background Hero Image */
+.hero > img {
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+
+/* Top Hero Banner Title */
+.hero h1 {
+    grid-column: 1 / -1;
+    grid-row: 1;
+    background-color: rgba(22, 52, 102, 0.85);
+    /* Semi-transparent dark blue */
+    color: #ffffff;
+    text-align: center;
+    padding: 12px 10px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    z-index: 2;
+}
+
+/* Bottom Hero Article Overlay */
+.hero article {
+    grid-column: 1 / -1;
+    grid-row: 3;
+    background-color: rgba(22, 52, 102, 0.85);
+    /* Semi-transparent dark blue */
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    gap: 15px;
+    margin: 20px;
+    z-index: 2;
+}
+
+.hero article p {
+    font-size: 0.88rem;
+    line-height: 1.35;
+    flex: 1;
+}
+
+.hero article img {
+    width: 110px;
+    height: 75px;
+    object-fit: cover;
+    border: 1px solid #ffffff;
+}
+
+/* ==========================================================================
+   Sections (History & Call to Action Banners)
+   ========================================================================== */
+section {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+section h2 {
+    background-color: #1a3c70;
+    /* Dark blue section bar */
+    color: #ffffff;
+    padding: 10px;
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+section p {
+    text-align: left;
+    font-size: 0.9rem;
+    color: #222222;
+    padding: 0 5px;
+    line-height: 1.4;
+}
+
+/* Center aligned subtext for bottom section */
+section:last-of-type p {
+    text-align: center;
+}
+
+/* ==========================================================================
+   Footer & Social Icons
+   ========================================================================== */
+footer {
+    margin-top: 30px;
+    padding-top: 10px;
+    border-top: 1px solid #e0e0e0;
+    font-size: 0.85rem;
+    color: #333333;
+}
+
+footer p {
+    margin-bottom: 10px;
+}
+
+.socialmedia {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Hide text links if only icons are intended to show */
+.socialmedia a {
+    text-decoration: none;
+    font-size: 0;
+}
+
+.socialmedia img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
