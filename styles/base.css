@@ -1,0 +1,175 @@
+/* General Reset & Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #333333;
+}
+
+/* Header & Navigation */
+header {
+    background-color: #1a4d6c;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+#course-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: #333333;
+    margin-top: 10px;
+    padding: 12px 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+nav a:hover {
+    color: #008000;
+}
+
+/* Main Layout */
+main {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 0 15px;
+}
+
+h1 {
+    text-align: center;
+    color: #222;
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+}
+
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Cards */
+.card {
+    border: 1px solid #bbb;
+    border-radius: 6px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.card h2 {
+    background-color: #1a4d6c;
+    color: white;
+    margin: 0;
+    padding: 12px;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+/* About Me Content */
+.about-content {
+    display: flex;
+    gap: 15px;
+    padding: 15px;
+    align-items: flex-start;
+}
+
+.about-content p {
+    margin: 0;
+    line-height: 1.5;
+    font-size: 0.95rem;
+}
+
+.profile-img {
+    width: 110px;
+    height: auto;
+    border-radius: 4px;
+    flex-shrink: 0;
+}
+
+/* Location Section */
+.location-section {
+    padding: 0 15px 15px 15px;
+}
+
+.location-section h3 {
+    text-align: center;
+    margin: 10px 0 5px 0;
+    font-size: 1rem;
+}
+
+.location-section hr {
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin-bottom: 15px;
+}
+
+.flag-container {
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+}
+
+.flag-img {
+    width: 130px;
+    height: auto;
+    border: 1px solid #ddd;
+    flex-shrink: 0;
+}
+
+.flag-container p {
+    margin: 0;
+    font-size: 0.85rem;
+    line-height: 1.4;
+}
+
+/* Web Dev Resources List */
+.resources-list {
+    list-style-type: disc;
+    padding: 20px 20px 20px 40px;
+    margin: 0;
+}
+
+.resources-list li {
+    margin-bottom: 12px;
+}
+
+.resources-list a {
+    color: #0066cc;
+    text-decoration: underline;
+    font-size: 0.95rem;
+}
+
+/* Footer */
+footer {
+    background-color: #1a4d6c;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+#lastModified {
+    color: #ffeb3b;
+    font-size: 0.9rem;
+}
