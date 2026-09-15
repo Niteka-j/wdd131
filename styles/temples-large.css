@@ -1,0 +1,21 @@
+/* temples-large.css - Larger View Styles (Desktop / min-width: 768px) */
+@media screen and (min-width: 768px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 1rem 2rem;
+    }
+
+    header h1 {
+        font-size: 1.75rem;
+    }
+
+    nav ul {
+        gap: 1.5rem;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+}

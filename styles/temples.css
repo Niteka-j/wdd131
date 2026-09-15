@@ -1,0 +1,118 @@
+/* temples.css - Base & Mobile Styles */
+:root {
+    --primary-color: #3f0c57;
+    --text-color: #333333;
+    --bg-color: #ffffff;
+    --nav-hover: rgba(255, 255, 255, 0.2);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    line-height: 1.5;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    align-items: center;
+    gap: 1rem;
+}
+
+
+header h1 {
+    font-size: 1.5rem;
+    font-weight: normal;
+}
+nav{
+    display: flex;
+    gap: 35px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: line;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+nav ul.show{
+    display: flex;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 0.75rem;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+nav a:hover {
+    background-color: var(--nav-hover);
+}
+
+main {
+    max-width: 1000px;
+    margin: 1.5rem auto;
+    padding: 0 1rem;
+}
+
+main h2, main h1 {
+    text-align: center;
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+    font-weight: normal;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+figure {
+    background-color: #fcfcfc;
+    border: 1px solid #ddd;
+    padding: 0.5rem;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+figure img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+figcaption {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 1.25rem 1rem;
+    margin-top: 2rem;
+    font-size: 0.85rem;
+    line-height: 1.6;
+}
+
+footer p {
+    margin: 0.2rem 0;
+}
