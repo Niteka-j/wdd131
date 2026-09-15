@@ -20,7 +20,7 @@ menuBtn.addEventListener("click", () => {
     if(navMenu.classList.contains("show")){
         menuBtn.textContent = "✖️";
     } else {
-        menuBtn.textContent = "☰";
+        menuBtn.textContent = "";
     }
 
 });
