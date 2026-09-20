@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burundi - Heart of Africa | WDD 131 Place Page</title>
+    <!-- Tailwind CSS for modern responsive utility styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        burundiGreen: '#1EB954',
+                        burundiRed: '#CE1126',
+                        burundiWhite: '#FFFFFF',
+                        burundiDark: '#2C2C2C',
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #CE1126;
+            --secondary-color: #1EB954;
+            --accent-yellow: #FFD100;
+            --dark-color: #2C2C2C;
+            --light-bg: #F9FAFB;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--primary-color);
+            color: var(--dark-color);
+        }
+
+        /* Pseudo-element for the weather icon in wide view as requested */
+        @media (min-width: 768px) {
+            .weather-heading::after {
+                content: " ⛅";
+                font-size: 1.5rem;
+                vertical-align: middle;
+            }
+        }
+    </style>
+    <!-- Defer JavaScript execution until DOM is fully parsed -->
+    <script src="place.js" defer></script>
+</head>
+<body class="min-h-screen flex flex-col justify-between bg-[#CE1126]">
+
+    <header class="bg-[#CE1126] shadow-md py-6 px-4 text-center border-b-4 border-burundiGreen">
+        <h1 class="text-3xl sm:text-4xl font-extrabold text-white tracking-wide drop-shadow-md">
+            Burundi: The Heart of Africa
+        </h1>
+    </header>
+
+    <main class="flex-grow relative w-full overflow-hidden">
+        <!-- Background Hero Image filling the main area -->
+        <div class="absolute inset-0 w-full h-full z-0">
+            <img 
+                src="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=1200&auto=format&fit=crop&q=80" 
+                srcset="
+                    https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=500&auto=format&fit=crop&q=80 500w,
+                    https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=1000&auto=format&fit=crop&q=80 1000w,
+                    https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=1600&auto=format&fit=crop&q=80 1600w
+                "
+                sizes="100vw"
+                alt="Scenic landscape of Burundi featuring rolling hills and nature" 
+                class="w-full h-full object-cover"
+                onerror="this.src='https://placehold.co/1200x800/1EB954/FFFFFF?text=Burundi+Landscape'"
+            >
+            <div class="absolute inset-0 bg-black/20"></div>
+        </div>
+
+        <!-- Content Overlay Container -->
+        <div class="relative z-10 container mx-auto px-4 py-8 md:py-16 max-w-7xl min-h-[550px] flex flex-col justify-between">
+            
+            <!-- Cards Grid: Data Card on Left, Weather Card on Right (matching screenshot style) -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+                
+                <!-- Data Card -->
+                <section class="bg-white/95 backdrop-blur-md rounded-lg shadow-2xl overflow-hidden max-w-md w-full">
+                    <div class="bg-burundiGreen text-white px-6 py-3 font-bold text-xl tracking-wide">
+                        Data
+                    </div>
+                    <div class="p-6 space-y-3 text-gray-800 text-sm sm:text-base">
+                        <div class="flex justify-between items-center py-1.5 border-b border-gray-100">
+                            <strong class="font-semibold text-gray-900">Area:</strong>
+                            <span>27,834 sq km</span>
+                        </div>
+                        <div class="flex justify-between items-center py-1.5 border-b border-gray-100">
+                            <strong class="font-semibold text-gray-900">Population:</strong>
+                            <span>12+ Million (RGPHAE2025)</span>
+                        </div>
+                        <div class="flex justify-between items-center py-1.5 border-b border-gray-100">
+                            <strong class="font-semibold text-gray-900">Capital:</strong>
+                            <span>Gitega (Political) | Bujumbura (Economic)</span>
+                        </div>
+                        <div class="flex justify-between items-center py-1.5 border-b border-gray-100">
+                            <strong class="font-semibold text-gray-900">Languages:</strong>
+                            <span>Kirundi, French, English, Swahili</span>
+                        </div>
+                        <div class="flex justify-between items-center py-1.5 border-b border-gray-100">
+                            <strong class="font-semibold text-gray-900">Currency:</strong>
+                            <span>Burundian Franc (BIF)</span>
+                        </div>
+                        <div class="flex justify-between items-center py-1.5 border-b border-gray-100">
+                            <strong class="font-semibold text-gray-900">Time Zone:</strong>
+                            <span>CAT (UTC+2)</span>
+                        </div>
+                        <div class="flex justify-between items-center py-1.5">
+                            <strong class="font-semibold text-gray-900">Calling Code:</strong>
+                            <span>+257</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Weather Card -->
+                <section class="bg-white/95 backdrop-blur-md rounded-lg shadow-2xl overflow-hidden max-w-md w-full md:ml-auto">
+                    <!-- Weather heading styled with pseudo-element weather icon in wide view -->
+                    <div class="bg-burundiGreen text-white px-6 py-3 font-bold text-xl tracking-wide flex items-center justify-between weather-heading">
+                        <span>Weather</span>
+                        <!-- SVG Weather Icon for mobile view -->
+                        <svg class="w-6 h-6 text-white md:hidden inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h10a4 4 0 004-4M13 3a4 4 0 014 4h1a3 3 0 013 3v1m-8-8a4 4 0 00-4 4h-1a3 3 0 00-3 3v1" />
+                        </svg>
+                    </div>
+                    <div class="p-6 space-y-3 text-gray-800 text-sm sm:text-base">
+                        <div class="flex justify-between items-center py-1.5 border-b border-gray-100">
+                            <strong class="font-semibold text-gray-900">Temperature:</strong>
+                            <span id="temp-value">22 °C</span>
+                        </div>
+                        <div class="flex justify-between items-center py-1.5 border-b border-gray-100">
+                            <strong class="font-semibold text-gray-900">Conditions:</strong>
+                            <span id="conditions-value">Partly Cloudy</span>
+                        </div>
+                        <div class="flex justify-between items-center py-1.5 border-b border-gray-100">
+                            <strong class="font-semibold text-gray-900">Wind Speed:</strong>
+                            <span id="wind-value">12 km/h</span>
+                        </div>
+                        <div class="flex justify-between items-center py-1.5">
+                            <strong class="font-semibold text-gray-900">Wind Chill:</strong>
+                            <span id="windchill-value" class="font-semibold text-burundiGreen">N/A</span>
+                        </div>
+                        
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-[#CE1126] text-white py-6 px-4 text-center shadow-inner border-t border-red-700">
+        <div class="container mx-auto space-y-1 text-sm sm:text-base">
+            <p>&copy;<span id="current-year"></span> Bigirimana Jolis | Burundi country page</p>
+            <p class="text-white/90">Last Modification: <span id="last-modified"></span></p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // 1. Populate Footer dynamic current year and last modified date
+            const currentYearSpan = document.getElementById('current-year');
+            const lastModifiedSpan = document.getElementById('last-modified');
+
+            if (currentYearSpan) {
+                currentYearSpan.textContent = new Date().getFullYear();
+            }
+            if (lastModifiedSpan) {
+                lastModifiedSpan.textContent = document.lastModified;
+            }
+        });
+    </script>
+</body>
+</html>
