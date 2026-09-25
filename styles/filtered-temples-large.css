@@ -1,0 +1,36 @@
+/* filtered-temples-large.css - Larger View Styles (Desktop / min-width: 768px) */
+@media screen and (min-width: 768px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem;
+    }
+
+    header h1, header span {
+        margin-bottom: 0;
+        font-size: 1.75rem;
+    }
+
+    #menu {
+        display: none; /* Hide hamburger menu on desktop */
+    }
+
+    nav ul {
+        display: flex !important;
+        flex-direction: row;
+        background: transparent;
+        gap: 1.5rem;
+        margin-top: 0;
+    }
+
+    nav ul li a {
+        padding: 0.5rem 0.75rem;
+        border-radius: 4px;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+}

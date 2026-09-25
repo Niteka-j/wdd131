@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temple Album</title>
+    <meta name="description" content="A collection of images and information about Latter-day Saint temples around the world.">
+    <meta name="author" content="BIGIRIMANA Jolis">
+    
+    <!-- Google Fonts Links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- CSS Links -->
+     <link rel="stylesheet" href="styles/filtered-temple.css">
+    <link rel="stylesheet" href="styles/filtered-temples-large.css" media="screen and (min-width: 768px)">
+    
+    <!-- JavaScript Link -->
+    <script src="scripts/filtered-temple.js" defer></script>
+</head>
+<body>
+    <header>
+        <span>Temple Album</span>
+        <a id="menu" href="#" aria-label="Open Navigation Menu"></a>
+        <nav>
+            <ul class="navigation">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#" id="old">Old</a></li>
+                <li><a href="#" id="new">New</a></li>
+                <li><a href="#" id="large">Large</a></li>
+                <li><a href="#" id="small">Small</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Home</h1>
+        
+        <!-- Gallery wrapper to support CSS Grid layout populated via JavaScript -->
+        <div class="gallery"></div>
+    </main>
+
+    <footer>
+        <p>Copyright &copy;<span id="currentyear"></span> ✍️ Bigirimana Jolis ✍️ Burundi</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
