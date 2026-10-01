@@ -1,120 +1,212 @@
+/* ==========================
+   CSS Variables & Theme
+   ========================== */
 :root {
---deep-green: #164A3A;
---agricultural-green: #3E7C59;
---golden-yellow: #D9A441;
---cream: #F7F4EA;
---charcoal: #222222;
---white: #FFFFFF;
+    --deep-green: #164A3A;
+    --agri-green: #3E7C59;
+    --golden-yellow: #D9A441;
+    --cream: #F7F4EA;
+    --charcoal: #222222;
+    --white: #FFFFFF;
+    
+    --font-heading: 'Poppins', sans-serif;
+    --font-body: 'Open Sans', sans-serif;
+}
+
+/* ==========================
+   Global Styles
+   ========================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-font-family: 'Open Sans', sans-serif;
-background-color: var(--cream);
-color: var(--charcoal);
-margin: 0;
-padding: 0;
-line-height: 1.6;
+    font-family: var(--font-body);
+    background-color: var(--cream);
+    color: var(--charcoal);
+    line-height: 1.6;
+    padding: 0;
 }
 
+/* ==========================
+   Header Styles
+   ========================== */
 header {
-background-color: var(--deep-green);
-color: var(--white);
-padding: 2rem 1rem;
-text-align: center;
+    background-color: var(--deep-green);
+    color: var(--white);
+    text-align: center;
+    padding: 3rem 1rem;
+    border-bottom: 5px solid var(--golden-yellow);
 }
 
 header h1 {
-font-family: 'Poppins', sans-serif;
-margin: 0 0 0.5rem 0;
-font-size: 2.5rem;
-color: var(--white);
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    letter-spacing: 1px;
 }
 
 header p {
-font-size: 1.1rem;
-color: var(--cream);
-margin: 0;
+    font-size: 1.1rem;
+    color: var(--cream);
+    opacity: 0.9;
 }
 
-.container {
-max-width: 1000px;
-margin: 2rem auto;
-padding: 0 1.5rem;
+/* ==========================
+   Main Content Layout
+   ========================== */
+main {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
 }
 
 section {
-background: var(--white);
-margin-bottom: 2rem;
-padding: 2rem;
-border-radius: 8px;
-box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    background-color: var(--white);
+    margin-bottom: 2rem;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(22, 74, 58, 0.08);
+    border-left: 6px solid var(--agri-green);
 }
 
 h2 {
-font-family: 'Poppins', sans-serif;
-color: var(--deep-green);
-border-bottom: 3px solid var(--golden-yellow);
-padding-bottom: 0.5rem;
-margin-top: 0;
+    font-family: var(--font-heading);
+    color: var(--deep-green);
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--cream);
 }
 
-.cta-btn {
-display: inline-block;
-background-color: var(--golden-yellow);
-color: var(--charcoal);
-padding: 0.75rem 1.5rem;
-border-radius: 4px;
-text-decoration: none;
-font-weight: 600;
-margin-top: 1rem;
-transition: opacity 0.2s, transform 0.2s;
+h3 {
+    font-family: var(--font-heading);
+    color: var(--agri-green);
+    font-size: 1.25rem;
+    margin-top: 1.25rem;
+    margin-bottom: 0.5rem;
 }
 
-.cta-btn:hover {
-opacity: 0.9;
-transform: translateY(-2px);
+p {
+    margin-bottom: 1rem;
 }
 
-.grid {
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-gap: 1.5rem;
-margin-top: 1rem;
+ul {
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
 }
 
-.card {
-background-color: var(--cream);
-padding: 1.5rem;
-border-radius: 6px;
-border-left: 4px solid var(--agricultural-green);
+li {
+    margin-bottom: 0.5rem;
 }
 
-.card h3 {
-font-family: 'Poppins', sans-serif;
-color: var(--deep-green);
-margin-top: 0;
+a {
+    color: var(--deep-green);
+    font-weight: 600;
+    text-decoration: none;
 }
 
-.palette {
-display: flex;
-flex-wrap: wrap;
-gap: 1rem;
-margin-top: 1rem;
+a:hover {
+    color: var(--golden-yellow);
+    text-decoration: underline;
+}
+
+/* ==========================
+   Color Palette Display Grid
+   ========================== */
+.color-palette {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
 }
 
 .color-box {
-flex: 1 1 120px;
-padding: 1rem;
-text-align: center;
-border-radius: 4px;
-font-size: 0.85rem;
-font-weight: 600;
+    padding: 1.25rem;
+    border-radius: 6px;
+    color: var(--charcoal);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    border: 1px solid rgba(0,0,0,0.05);
 }
 
+.color-box strong {
+    display: block;
+    font-size: 1.1rem;
+    margin-bottom: 0.25rem;
+}
+
+.color-box code {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.7);
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+    font-family: monospace;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+/* Specific background coloring for visual representation */
+.primary-box { background-color: var(--deep-green); color: var(--white); }
+.primary-box code { background: rgba(0,0,0,0.2); color: var(--white); }
+
+.secondary-box { background-color: var(--agri-green); color: var(--white); }
+.secondary-box code { background: rgba(0,0,0,0.2); color: var(--white); }
+
+.accent-box { background-color: var(--golden-yellow); color: var(--charcoal); }
+.background-box { background-color: var(--cream); color: var(--charcoal); }
+.text-box { background-color: var(--charcoal); color: var(--white); }
+.text-box code { background: rgba(255,255,255,0.2); color: var(--white); }
+.white-box { background-color: var(--white); color: var(--charcoal); border: 1px solid #ddd; }
+
+/* ==========================
+   Wireframe Placeholders
+   ========================== */
+.wireframe-mobile-placeholder,
+.wireframe-desktop-placeholder {
+    background-color: var(--cream);
+    border: 2px dashed var(--agri-green);
+    padding: 1.5rem;
+    text-align: center;
+    border-radius: 6px;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.wireframe-mobile-placeholder img,
+.wireframe-desktop-placeholder img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 0.75rem;
+}
+
+/* ==========================
+   Footer Styles
+   ========================== */
 footer {
-text-align: center;
-padding: 1.5rem;
-background-color: var(--charcoal);
-color: var(--cream);
-font-size: 0.9rem;
+    background-color: var(--charcoal);
+    color: var(--white);
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: 3rem;
+    font-size: 0.95rem;
+}
+
+footer p {
+    margin-bottom: 0.4rem;
+}
+
+/* ==========================
+   Responsive Enhancements
+   ========================== */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    section {
+        padding: 1.25rem;
+    }
 }
