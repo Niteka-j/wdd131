@@ -3,75 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD 131: Dynamic Web Fundamentals - BIGIRIMANA Jolis</title>
-    <meta name="description" content="WDD 131: Dynamic Web Fundamentals, BIGIRIMANA Jolis Course home page featuring web development resources, personal bio, and Burundi highlights.">
+    <title>Bijos - Product Review Portal</title>
+    <meta name="description" content="A comprehensive product review of travel experiences, accommodations, and destinations in Burundi.">
     <meta name="author" content="BIGIRIMANA Jolis">
-    
-    <!-- Google Fonts Links -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="styles/base.css">
-    <script src="scripts/getdates.js" defer></script>
+    <link rel="stylesheet" href="project/styles/siteplan.css">
+    <script src="project/scripts/siteplan.js" defer></script>
 </head>
 <body>
-    <header>
-        <span id="course-title">WDD 131: Dynamic Web Fundamentals</span>
-        <nav>
-            <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
-            <a href="https://byupw.instructure.com/" target="_blank">I-Learn</a>
-            <a href="https://www.churchofjesuschrist.org/study/scriptures" target="_blank">Scripture</a>
-            <a href="#" target="_blank">Final Project</a>
-            <a href="temples.html">Temple</a>
-            <a href="country.html">Burundi</a>
-            <a href="filtered-temples.html"> Filtered-temple</a>"
-        </nav>
+
+    <header class="portal-header">
+        <h1>WDD 131 Dynamic Web Fundamentals</h1>
+        <p>Website Planning Document</p>
     </header>
-
-    <main>
-        <h1>BIGIRIMANA Jolis</h1>
-
-        <div class="grid-container">
-            <section class="card">
-                <h2>About Me</h2>
-                <div class="about-content">
-                    <p>
-                        My name is Bigirimana Jolis and I am passionate about Agriculture. I was born in Burundi and live with my family in Bujumbura. 
-                        I am currently working as an agribusiness coach and trainer at a local NGO. Rural farmers are my world and I love 
-                        spending time with them. I love to travel and I love to learn new things.
-                    </p>
-                    <img src="images/profile.jpg" alt="Bigirimana Jolis profile picture" class="profile-img" width="200" height="200">
-                </div>
-
-                <div class="location-section">
-                    <h3>Bujumbura, Burundi</h3>
-                    <hr>
-                    <div class="flag-container">
-                        <img src="images/flag_burundi.svg" alt="Official Flag of Burundi" class="flag-img" width="200" height="120">
-                        <p>
-                            Burundi is a small, landlocked country in East Africa that relies on agriculture as the main foundation of its economy and daily life.
-                        </p>
-                    </div>
-                </div>
-            </section>
-
-            <section class="card">
-                <h2>Web Dev Resources</h2>
-                <ul class="resources-list">
-                    <li><a href="https://dev.to" target="_blank">Dev.to Community</a></li>
-                    <li><a href="https://www.smashingmagazine.com" target="_blank">Smashing Magazine</a></li>
-                    <li><a href="https://css-tricks.com" target="_blank">CSS Tricks</a></li>
-                    <li><a href="https://www.w3schools.com" target="_blank">W3 Schools</a></li>
-                    <li><a href="https://www.udemy.com" target="_blank">Udemy</a></li>
-                    <li><a href="https://picsum.photos" target="_blank">Lorem Picsum Image Placeholder</a></li>
-                </ul>
-            </section>
+    
+    <main class="portal-main">
+        <div class="portal-card">
+            <h2>Project Navigation Portal</h2>
+            <p>Review the site plan blueprint for my upcoming bijos platform:</p>
+            <a href="project/siteplan.html" class="portal-btn">Open Site Plan Documentation</a>
+            <h3>Gear &amp; Equipment Feedback</h3>
+            <p>Did you use one or more of our products? Share your thoughts with us!</p>
+            <a href="form.html" class="portal-btn">Write a Product Review</a>
         </div>
     </main>
-    <footer>
-        <p>Copyright &copy;<span id="currentyear"></span> ✍️ Bigirimana Jolis ✍️ Burundi</p>
-        <p id="lastModified"></p>
-    </footer>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <p>Copyright &copy; <span id="currentYear"></span> BIGIRIMANA Jolis. Burundi</p>
+            <p class="footer-note">Last Modification: <span id="lastModified"></span></p>
+        </div>
 </body>
 </html>

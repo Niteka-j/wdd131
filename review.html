@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Confirmation - Wild Horizon Expeditions</title>
+    <meta name="description" content="Confirmation page acknowledging successful submission of your product review.">
+    <meta name="author" content="BIGIRIMANA Jolis">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="styles/form.css">
+    <!-- Inline or dedicated script to increment localStorage counter -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // Retrieve current review count from localStorage, default to 0 if not set
+            let reviewCount = Number(localStorage.getItem("reviewCount-ls")) || 0;
+            
+            // Increment by 1
+            reviewCount++;
+            
+            // Store back into localStorage
+            localStorage.setItem("reviewCount-ls", reviewCount);
+
+            // Display the review count on the page if an element exists
+            const counterDisplay = document.getElementById("reviewCountDisplay");
+            if (counterDisplay) {
+                counterDisplay.textContent = reviewCount;
+            }
+
+            // Footer dynamic info
+            document.getElementById("currentYear").textContent = new Date().getFullYear();
+            document.getElementById("lastModified").textContent = document.lastModified;
+        });
+    </script>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">Product Review Portal</h1>
+        </div>
+    </header>
+
+    <main class="main container">
+        <section class="form-section" style="text-align: center;">
+            <h2 style="color: #2d6a4f; margin-bottom: 1rem;">Thank You for Your Review!</h2>
+            <p class="form-intro" style="font-size: 1.1rem; margin-bottom: 1.5rem;">
+                Your feedback has been successfully submitted and recorded.
+            </p>
+            <div style="background-color: var(--accent-color); padding: 1.5rem; border-radius: 6px; margin-bottom: 2rem;">
+                <p style="font-size: 1.05rem; font-weight: 600; color: var(--primary-color);">
+                    Total Reviews Submitted by You: <span id="reviewCountDisplay" style="font-size: 1.3rem;">1</span>
+                </p>
+            </div>
+            <a href="form.html" class="submit-btn" style="display: inline-block; text-decoration: none; max-width: 250px;">Submit Another Review</a>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <p>&copy; <span id="currentYear"></span> | BIGIRIMANA Jolis | Burundi</p>
+            <p class="footer-note">Last Modification: <span id="lastModified"></span></p>
+        </div>
+    </footer>
+</body>
+</html>

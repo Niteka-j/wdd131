@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Review Form - Wild Horizon Expeditions</title>
+    <meta name="description" content="Product review form for submitting feedback on specialized gear and equipment.">
+    <meta name="author" content="BIGIRIMANA Jolis">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="styles/form.css">
+    <!-- JavaScript file (deferred) -->
+    <script src="scripts/form.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">Product Review Portal</h1>
+        </div>
+    </header>
+
+    <main class="main container">
+        <section class="form-section">
+            <h2>Share Your Experience</h2>
+            <p class="form-intro">Please fill out the form below to help us evaluate and improve our gear performance.</p>
+
+            <form method="get" action="review.html" class="review-form">
+                
+                <!-- Product Name -->
+                <div class="form-group">
+                    <label for="productName">Product Name <span class="required">*</span></label>
+                    <select id="productName" name="productName" required>
+                        <option value="" disabled selected>Select a Product ...</option>
+                        <!-- Dynamically populated via JavaScript -->
+                    </select>
+                </div>
+
+                <!-- Overall Rating -->
+                <fieldset class="form-group rating-group">
+                    <legend>Overall Rating <span class="required">*</span></legend>
+                    <div class="stars">
+                        <label title="1 star"><input type="radio" name="rating" value="1" required> &#9734;</label>
+                        <label title="2 stars"><input type="radio" name="rating" value="2"> &#9734;</label>
+                        <label title="3 stars"><input type="radio" name="rating" value="3"> &#9734;</label>
+                        <label title="4 stars"><input type="radio" name="rating" value="4"> &#9734;</label>
+                        <label title="5 stars"><input type="radio" name="rating" value="5"> &#9734;</label>
+                    </div>
+                </fieldset>
+
+                <!-- Date of Installation -->
+                <div class="form-group">
+                    <label for="installDate">Date of Installation <span class="required">*</span></label>
+                    <input type="date" id="installDate" name="installDate" required>
+                </div>
+
+                <!-- Useful Features -->
+                <fieldset class="form-group checkbox-group">
+                    <legend>Which features did you find useful? (Check all that apply)</legend>
+                    <div class="checkbox-options">
+                        <label><input type="checkbox" name="features" value="durability"> Durability</label>
+                        <label><input type="checkbox" name="features" value="easeOfUse"> Ease of Use</label>
+                        <label><input type="checkbox" name="features" value="performance"> Performance</label>
+                        <label><input type="checkbox" name="features" value="design"> Design & Aesthetics</label>
+                        <label><input type="checkbox" name="features" value="batteryLife"> Battery / Power Efficiency</label>
+                    </div>
+                </fieldset>
+
+                <!-- Written Review -->
+                <div class="form-group">
+                    <label for="writtenReview">Written Review <span class="optional">(Optional)</span></label>
+                    <textarea id="writtenReview" name="writtenReview" rows="5" placeholder="Share specific details about your experience with this product..."></textarea>
+                </div>
+
+                <!-- User Name -->
+                <div class="form-group">
+                    <label for="userName">Your Name <span class="optional">(Optional)</span></label>
+                    <input type="text" id="userName" name="userName" placeholder="e.g., Happy Jelly">
+                </div>
+
+                <!-- Submit Button -->
+                <div class="form-actions">
+                    <input type="submit" value="Post Review" class="submit-btn">
+                </div>
+
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <p>Copyright &copy; <span id="currentYear"></span> BIGIRIMANA Jolis. Burundi</p>
+            <p class="footer-note">Last Modification: <span id="lastModified"></span></p>
+        </div>
+    </footer>
+</body>
+</html>
