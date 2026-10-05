@@ -42,11 +42,20 @@
                 <fieldset class="form-group rating-group">
                     <legend>Overall Rating <span class="required">*</span></legend>
                     <div class="stars">
-                        <label title="1 star"><input type="radio" name="rating" value="1" required> &#9734;</label>
-                        <label title="2 stars"><input type="radio" name="rating" value="2"> &#9734;</label>
-                        <label title="3 stars"><input type="radio" name="rating" value="3"> &#9734;</label>
-                        <label title="4 stars"><input type="radio" name="rating" value="4"> &#9734;</label>
-                        <label title="5 stars"><input type="radio" name="rating" value="5"> &#9734;</label>
+                        <input type="radio" name="rating" id="star1" value="1" required>
+                        <label for="star1" title="1 star">&#9734;</label>
+
+                        <input type="radio" name="rating" id="star2" value="2" required>
+                        <label for="star2" title="2 stars">&#9734;</label>
+
+                        <input type="radio" name="rating" id="star3" value="3" required>
+                        <label for="star3" title="3 stars">&#9734;</label>
+
+                        <input type="radio" name="rating" id="star4" value="4" required>
+                        <label for="star4" title="4 stars">&#9734;</label>
+
+                        <input type="radio" name="rating" id="star5" value="5" required>
+                        <label for="star5" title="5 stars">&#9734;</label>
                     </div>
                 </fieldset>
 
@@ -60,11 +69,26 @@
                 <fieldset class="form-group checkbox-group">
                     <legend>Which features did you find useful? (Check all that apply)</legend>
                     <div class="checkbox-options">
-                        <label><input type="checkbox" name="features" value="durability"> Durability</label>
-                        <label><input type="checkbox" name="features" value="easeOfUse"> Ease of Use</label>
-                        <label><input type="checkbox" name="features" value="performance"> Performance</label>
-                        <label><input type="checkbox" name="features" value="design"> Design & Aesthetics</label>
-                        <label><input type="checkbox" name="features" value="batteryLife"> Battery / Power Efficiency</label>
+                        <div>
+                            <input type="checkbox" name="features" id="feature1" value="durability">
+                            <label for="feature1">Durability</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="features" id="feature2" value="easeOfUse">
+                            <label for="feature2">Ease of Use</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="features" id="feature3" value="performance">
+                            <label for="feature3">Performance</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="features" id="feature4" value="design">
+                            <label for="feature4">Design & Aesthetics</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="features" id="feature5" value="batteryLife">
+                            <label for="feature5">Battery / Power Efficiency</label>
+                        </div>
                     </div>
                 </fieldset>
 

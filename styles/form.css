@@ -231,3 +231,10 @@ textarea:focus {
     color: #adb5bd;
     font-size: 0.85rem;
 }
+
+/* Media Query Rule */
+@media (min-width: 768px) {
+    .form-section {
+        padding: 3rem;
+    }
+}
