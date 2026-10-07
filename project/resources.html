@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jolis BIGIRIMANA | Business Coach & Agripreneurship Trainer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/home.css">
+    <script src="scripts/home.js" defer></script>
+</head>
+<body>
+    <!-- En-tête et Navigation -->
+    <header class="site-header">
+        <div class="container nav-container">
+           <a href="index.html" class="logo-wrapper">
+    <img src="images/logo.png" alt="Logo de BIGIRIMANA JOLIS" class="logo-image" loading="lazy" width="50" height="50">
+    <span class="logo-text">BIJOS</span>
+</a>
+            <button class="menu-toggle" id="menuToggle" aria-label="Ouvrir le menu">☰</button>
+            <nav class="main-nav" id="mainNav">
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="about.html">About Me</a></li>
+                    <li class="dropdown">
+                        <a href="resources.html">Services ▾</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="resources.html#coaching">Business Coach</a></li>
+                            <li><a href="resources.html#agripreneurship">Agripreneurship</a></li>
+                            <li><a href="resources.html#training">Training & Mentorship</a></li>
+                            <li><a href="resources.html#socialentrepreneurship">Social Entrepreneurship</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="resources.html">Resources</a></li>
+                    
+                    <!-- Language Switcher Dropdown -->
+                    <li class="dropdown lang-dropdown">
+                        <a href="#" id="currentLang">🌐 EN ▾</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#" onclick="changeLanguage('fr'); return false;">Français (FR)</a></li>
+                            <li><a href="#" onclick="changeLanguage('en'); return false;">English (EN)</a></li>
+                            <li><a href="#" onclick="changeLanguage('rn'); return false;">Kirundi (BI)</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="contact.html" class="btn-nav">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+    <section class="hero text-center">
+        <div class="container">
+            <h1 class="resources-hero-title">Resources</h1>
+            <p class="subtitle">Practical Knowledge for Entrepreneurs</p>
+            <p class="resources-hero-desc">
+                Welcome to my resource center, where I share ideas, tools, and lessons related to entrepreneurship, agripreneurship, business development, and sustainable enterprise.
+            </p>
+        </div>
+    </section>
+
+    <!-- Main Resources Grid Section -->
+    <section class="section-padding bg-cream">
+        <div class="container">
+            <div class="services-container">
+                
+                <!-- Business Coaching -->
+                <div class="service-card coaching-card">
+                    <h3>Business Coaching</h3>
+                    <p class="card-desc">Practical ideas to help entrepreneurs improve their businesses.</p>
+                    <p class="topics-label">Topics:</p>
+                    <p class="topics-list">Business Models &bull; Business Planning &bull; Growth &bull; Leadership &bull; Decision-Making</p>
+                </div>
+
+                <!-- Agripreneurship -->
+                <div class="service-card agri-card">
+                    <h3>Agripreneurship</h3>
+                    <p class="card-desc">Exploring opportunities at the intersection of agriculture and entrepreneurship.</p>
+                    <p class="topics-label">Topics:</p>
+                    <p class="topics-list">Agribusiness &bull; Value Chains &bull; Markets &bull; Innovation &bull; Youth in Agriculture</p>
+                </div>
+
+                <!-- Business Management -->
+                <div class="service-card management-card">
+                    <h3>Business Management</h3>
+                    <p class="card-desc">Tools and practical lessons for managing a growing enterprise.</p>
+                    <p class="topics-label">Topics:</p>
+                    <p class="topics-list">Finance &bull; Accounting &bull; Marketing &bull; Sales &bull; Human Resources</p>
+                </div>
+
+                <!-- Youth Entrepreneurship -->
+                <div class="service-card youth-card">
+                    <h3>Youth Entrepreneurship</h3>
+                    <p class="card-desc">Ideas and opportunities for young people interested in entrepreneurship.</p>
+                    <p class="topics-label">Topics:</p>
+                    <p class="topics-list">Entrepreneurial Mindset &bull; Skills &bull; Innovation &bull; Business Opportunities &bull; Leadership</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Tools & Templates Section -->
+    <section class="section-padding tools-section">
+        <div class="container tools-container">
+            <h2 class="text-center tools-title">Tools & Templates</h2>
+            <p class="section-intro">Practical resources that entrepreneurs can use in their businesses.</p>
+            
+            <div class="tools-box">
+                <h3>Coming soon:</h3>
+                <ul class="tools-list">
+                    <li>Business Model Canvas</li>
+                    <li>Business Plan Template</li>
+                    <li>Simple Cash-Flow Template</li>
+                    <li>Business Self-Assessment</li>
+                    <li>Marketing Planning Tool</li>
+                    <li>Coaching Follow-Up Tools</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stay Connected CTA Section -->
+    <section class="cta-section text-center">
+        <div class="container cta-container">
+            <h2>Stay Connected</h2>
+            <p>New articles, tools, and insights will be added regularly to support your entrepreneurial journey.</p>
+            <a href="contact.html" class="btn btn-primary cta-btn">Get in Touch</a>
+        </div>
+    </section>
+      <!-- Pied de page -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="logo-wrapper" style="margin-bottom: 1rem;">
+                        <img src="images/logo.png" alt="Logo de BIGIRIMANA JOLIS" class="logo-image" loading="lazy" width="40" height="40">
+                        <span class="logo-text" style="color: var(--golden-yellow);">BIJOS</span>
+                    </div>
+                <h3>BIGIRIMANA JOLIS</h3>
+                <p>Business Coach | Agripreneurship Trainer</p>
+                <p>Turning Ideas into Sustainable Businesses</p>
+            </div>
+            <div>
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="about.html">About Me</a></li>
+                    <li><a href="resources.html">Services</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Follow me</h4>
+                <div class="social-links">
+                    <a href="#" target="_blank" rel="noopener">LinkedIn</a>
+                    <a href="#" target="_blank" rel="noopener">Facebook</a>
+                    <a href="#" target="_blank" rel="noopener">X</a>
+                    <a href="#" target="_blank" rel="noopener">Instagram</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 BIGIRIMANA Jolis. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

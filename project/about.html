@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jolis BIGIRIMANA | Business Coach & Agripreneurship Trainer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/home.css">
+    <script src="scripts/home.js" defer></script>
+</head>
+<body>
+    <!-- En-tête et Navigation -->
+    <header class="site-header">
+        <div class="container nav-container">
+           <a href="index.html" class="logo-wrapper">
+    <img src="images/logo.png" alt="Logo de BIGIRIMANA JOLIS" class="logo-image" loading="lazy" width="50" height="50">
+    <span class="logo-text">BIJOS</span>
+</a>
+            <button class="menu-toggle" id="menuToggle" aria-label="Ouvrir le menu">☰</button>
+            <nav class="main-nav" id="mainNav">
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="about.html">About Me</a></li>
+                    <li class="dropdown">
+                        <a href="resources.html">Services ▾</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="resources.html#coaching">Business Coach</a></li>
+                            <li><a href="resources.html#agripreneurship">Agripreneurship</a></li>
+                            <li><a href="resources.html#training">Training & Mentorship</a></li>
+                            <li><a href="resources.html#socialentrepreneurship">Social Entrepreneurship</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="resources.html">Resources</a></li>
+                    
+                    <!-- Language Switcher Dropdown -->
+                    <li class="dropdown lang-dropdown">
+                        <a href="#" id="currentLang">🌐 EN ▾</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#" onclick="changeLanguage('fr'); return false;">Français (FR)</a></li>
+                            <li><a href="#" onclick="changeLanguage('en'); return false;">English (EN)</a></li>
+                            <li><a href="#" onclick="changeLanguage('rn'); return false;">Kirundi (BI)</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="contact.html" class="btn-nav">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <!-- Hidden Google Translate Element -->
+    <div id="google_translate_element" style="display:none;"></div>
+
+    <!-- Page Header Hero -->
+    <section class="hero" style="padding: 4rem 0;">
+        <div class="container text-center">
+            <h1>About Me</h1>
+            <p class="subtitle">Helping People Build Businesses That Create Value</p>
+        </div>
+    </section>
+
+    <!-- Introduction Section -->
+    <section class="section-padding">
+        <div class="container" style="max-width: 900px;">
+            <p style="font-size: 1.15rem; margin-bottom: 1.5rem; line-height: 1.8;">
+                I am <strong>Jolis BIGIRIMANA</strong>, a Business Coach, Agripreneurship Trainer, and Social Entrepreneur passionate about entrepreneurship, agriculture, youth empowerment, and sustainable development.
+            </p>
+            <p style="font-size: 1.1rem; margin-bottom: 1.5rem; line-height: 1.8; color: var(--agri-green); font-weight: 600;">
+                For me, entrepreneurship is not simply about starting a business. It is about identifying opportunities, solving problems, creating value, and building sustainable livelihoods.
+            </p>
+            <p style="font-size: 1.1rem; line-height: 1.8;">
+                My work focuses on helping entrepreneurs and agricultural actors develop the knowledge, skills, strategies, and confidence they need to grow their businesses.
+            </p>
+        </div>
+    </section>
+
+    <!-- Professional Focus Section -->
+    <section class="section-padding bg-cream">
+        <div class="container">
+            <h2 class="text-center" style="margin-bottom: 1rem;">My Professional Focus</h2>
+            <p class="section-intro">My experience includes supporting:</p>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; max-width: 1000px; margin: 0 auto 3rem auto;">
+                <div style="background: var(--white); padding: 1.5rem; border-radius: 8px; border-left: 4px solid var(--golden-yellow); box-shadow: 0 4px 10px rgba(0,0,0,0.03);">
+                    <p style="font-weight: 600;">Entrepreneurs and young agripreneurs</p>
+                </div>
+                <div style="background: var(--white); padding: 1.5rem; border-radius: 8px; border-left: 4px solid var(--golden-yellow); box-shadow: 0 4px 10px rgba(0,0,0,0.03);">
+                    <p style="font-weight: 600;">Farmers and agricultural businesses</p>
+                </div>
+                <div style="background: var(--white); padding: 1.5rem; border-radius: 8px; border-left: 4px solid var(--golden-yellow); box-shadow: 0 4px 10px rgba(0,0,0,0.03);">
+                    <p style="font-weight: 600;">Cooperatives and producer groups</p>
+                </div>
+                <div style="background: var(--white); padding: 1.5rem; border-radius: 8px; border-left: 4px solid var(--golden-yellow); box-shadow: 0 4px 10px rgba(0,0,0,0.03);">
+                    <p style="font-weight: 600;">Micro, small and medium enterprises</p>
+                </div>
+                <div style="background: var(--white); padding: 1.5rem; border-radius: 8px; border-left: 4px solid var(--golden-yellow); box-shadow: 0 4px 10px rgba(0,0,0,0.03);">
+                    <p style="font-weight: 600;">Youth economic groups</p>
+                </div>
+                <div style="background: var(--white); padding: 1.5rem; border-radius: 8px; border-left: 4px solid var(--golden-yellow); box-shadow: 0 4px 10px rgba(0,0,0,0.03);">
+                    <p style="font-weight: 600;">Organizations implementing entrepreneurship and economic-development programs</p>
+                </div>
+            </div>
+
+            <p class="text-center" style="font-weight: 600; color: var(--deep-green); font-size: 1.1rem;">
+                My approach combines coaching, training, mentorship, technical support, and practical business tools.
+            </p>
+        </div>
+    </section>
+
+    <!-- Areas of Expertise Section -->
+    <section class="section-padding">
+        <div class="container">
+            <h2 class="text-center" style="margin-bottom: 0.5rem;">My Areas of Expertise</h2>
+            <p class="section-intro">Core competencies driving success across sectors</p>
+            
+            <div class="approach-grid">
+                <div class="approach-card">
+                    <h3>Entrepreneurship Development</h3>
+                    <p>Helping entrepreneurs move from business ideas to practical and sustainable enterprises.</p>
+                </div>
+                <div class="approach-card">
+                    <h3>Agripreneurship</h3>
+                    <p>Promoting agriculture as a business opportunity through market-oriented approaches and value creation.</p>
+                </div>
+                <div class="approach-card">
+                    <h3>Business Coaching</h3>
+                    <p>Helping entrepreneurs identify challenges, make strategic decisions, and improve their businesses.</p>
+                </div>
+                <div class="approach-card">
+                    <h3>Training & Capacity Building</h3>
+                    <p>Designing and delivering practical learning experiences for entrepreneurs, youth, cooperatives, and organizations.</p>
+                </div>
+                <div class="approach-card" style="grid-column: span auto;">
+                    <h3>Social Entrepreneurship</h3>
+                    <p>Supporting business approaches that combine economic opportunity with positive social impact.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Vision Section -->
+    <section class="section-padding bg-cream">
+        <div class="container" style="max-width: 900px; display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 3rem;">
+            <div>
+                <h3 style="margin-bottom: 1rem; color: var(--deep-green);">My Mission</h3>
+                <p style="margin-bottom: 1rem; line-height: 1.7;">
+                    To empower entrepreneurs and communities with practical knowledge, tools, and support to create sustainable economic opportunities.
+                </p>
+                <p style="line-height: 1.7;">
+                    I believe that entrepreneurship can contribute to employment, innovation, food-system transformation, and inclusive economic development.
+                </p>
+            </div>
+            <div>
+                <h3 style="margin-bottom: 1rem; color: var(--deep-green);">My Vision</h3>
+                <p style="line-height: 1.7;">
+                    A future where entrepreneurs have the knowledge, opportunities, and support they need to build businesses that are profitable, sustainable, inclusive, and impactful.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Let's Connect CTA Section -->
+    <section class="cta-section text-center">
+        <div class="container" style="max-width: 700px;">
+            <h2>Let's Connect</h2>
+            <p>Whether you are an entrepreneur seeking coaching, an organization looking for a trainer, or a potential partner interested in collaboration, I would be happy to connect.</p>
+            <a href="contact.html" class="btn btn-primary" style="margin-top: 1rem;">Contact Me</a>
+        </div>
+    </section>
+
+    <!-- Pied de page -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="logo-wrapper" style="margin-bottom: 1rem;">
+                        <img src="images/logo.png" alt="Logo de BIGIRIMANA JOLIS" class="logo-image" loading="lazy" width="40" height="40">
+                        <span class="logo-text" style="color: var(--golden-yellow);">BIJOS</span>
+                    </div>
+                <h3>BIGIRIMANA JOLIS</h3>
+                <p>Business Coach | Agripreneurship Trainer</p>
+                <p>Turning Ideas into Sustainable Businesses</p>
+            </div>
+            <div>
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="about.html">About Me</a></li>
+                    <li><a href="resources.html">Services</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Follow me</h4>
+                <div class="social-links">
+                    <a href="#" target="_blank" rel="noopener">LinkedIn</a>
+                    <a href="#" target="_blank" rel="noopener">Facebook</a>
+                    <a href="#" target="_blank" rel="noopener">X</a>
+                    <a href="#" target="_blank" rel="noopener">Instagram</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 BIGIRIMANA Jolis. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
